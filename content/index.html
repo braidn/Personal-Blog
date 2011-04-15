@@ -1,0 +1,7 @@
+--- 
+title: Cloudbacon
+---
+
+<% @site.sorted_articles[0, 10].each do |post| %>
+<%= post.content :rep => :summary %>
+<% end %>
