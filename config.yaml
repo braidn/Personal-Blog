@@ -7,6 +7,7 @@ text_extensions: [ 'css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown'
 # can be an absolute path starting with a slash, but it can also be path
 # relative to the site directory.
 output_dir: output
+base_url: http://www.cloudbacon.com
 
 # A list of index filenames, i.e. names of files that will be served by a web
 # server when a directory is requested. Usually, index files are named
@@ -39,3 +40,6 @@ data_sources:
     # The path where layouts should be mounted. The layouts root behaves the
     # same as the items root, but applies to layouts rather than items.
     layouts_root: /
+deploy:
+    default:
+        dst: "myuntitledfolder.com@s58585.gridserver.com:/home/58585/users/.home/domains/cloudbacon.com/html"
