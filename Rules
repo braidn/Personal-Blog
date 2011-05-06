@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 # A few helpful tips about the Rules file:
 #
 # * The order of rules is important: for each item, only the first matching
@@ -9,6 +8,9 @@
 #   “content/about.html”). To select all children, grandchildren, … of an
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
+require 'compass'
+Compass.add_project_configuration 'compass/config.rb'
+
 compile '/posts/*' do
     rep.filter :erb
     rep.filter :bluecloth
