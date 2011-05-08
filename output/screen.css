@@ -49,7 +49,7 @@ a:hover { color: #ff9900; }
 /* line 42, ../sass/screen.sass */
 #main ul { margin: 20px; }
 /* line 44, ../sass/screen.sass */
-#main li { list-style-type: square; font-size: 15px; line-height: 20px; }
+#main li { list-style-type: none; font-size: 15px; line-height: 20px; }
 
 /* line 50, ../sass/screen.sass */
 #sidebar { position: absolute; top: 40px; left: 20px; width: 200px; padding: 20px 20px 0 0; border-right: 1px solid #cccccc; text-align: right; }
