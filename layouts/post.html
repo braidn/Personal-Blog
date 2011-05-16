@@ -1,5 +1,10 @@
 <h1><%= @item[:title] %></h1>
 <h2>Written for: <%= @item[:created_at] %></h2>
 <%= yield %>
-    <p>filed under: 
-    <%= tags_for(@item) %> </p>
+<br />
+    <p>filed under:
+    <%= tags_for(@item) %> 
+    </p>
+    <% home = @items.find {|i| i.identifier == '/'} %>
+    <p class="homeButton"><%= link_to('Back To List of Posts', home) %>
+    </p>
