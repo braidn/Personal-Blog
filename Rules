@@ -44,3 +44,4 @@ route '*' do
 end
 
 layout '*', :erb
+
