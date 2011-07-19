@@ -2,7 +2,7 @@
 <h2>Written for: <%= @item[:created_at] %></h2>
 <%= yield %>
 <br />
-    <p>filed under:
+    <p class="homeButton">filed under:
     <%= tags_for(@item, :base_url => 'http://duckduckgo.com/?q=') %> 
     </p>
     <% home = @items.find {|i| i.identifier == '/'} %>
