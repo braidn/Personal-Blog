@@ -12,6 +12,10 @@ require 'compass'
 require 'albino'
 Compass.add_project_configuration 'config.rb'
 
+compile '/posts/feed/' do
+  filter :erb
+end
+
 compile '/posts/*' do
     rep.filter :erb
     rep.filter :bluecloth
@@ -37,6 +41,10 @@ end
 
 route '/stylesheet/' do
   '/style.css'
+end
+
+route '/posts/feed/' do
+  '/feed.xml'
 end
 
 route '*' do
