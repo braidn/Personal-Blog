@@ -40,6 +40,11 @@ data_sources:
     # The path where layouts should be mounted. The layouts root behaves the
     # same as the items root, but applies to layouts rather than items.
     layouts_root: /
+
+title: Cloudbacon
+author_name: Braden Douglass
+author_uri: http://www.bradendouglass.com
+
 deploy:
     default:
         dst: "myuntitledfolder.com@s58585.gridserver.com:/home/58585/users/.home/domains/cloudbacon.com/html"

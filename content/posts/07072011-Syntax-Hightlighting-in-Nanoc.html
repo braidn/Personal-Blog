@@ -8,10 +8,15 @@ tags: ['ruby', 'python', 'code', 'colors']
 Code highlighting with say, Wordpress is an absolute breeze. All that is required is finding the [plugin][1] that suits your fancy. This isn't quite as easy when using a solution like [nanoc][2] or any other Ruby based static site generator. This is due to the fact that all of your files are compiled on the fly into html, instead of being held in a database and being "served" every time someone visits your site (ala Wordpress/Drupal). For the person who is smart enough to run a static site, don't fret. You have several great options that are dyeing for implementation.
 
 The two that come to mind are [Pygments][3] and [CodeRay][4]. CodeRay is built with Ruby so it is as easy as:  
+
 <%= Albino.colorize('gem install coderay', :bash) %>  
+
 However, since Pygments is Python specific, we need a little wrapper to make it work in our Ruby environment. A quick search on [Github][5] leads us to [Albino][6]...a wrapper for Pygments. Since it is a wrapper we need to nab Pygments by invoking:  
+
 <%= Albino.colorize('sudo easy_install pygments', :bash) %>  
+
 and then:  
+
 <%= Albino.colorize('gem install albino', :bash) %>
 
 For Cloudbacon, I have decided to stick with the Albino gem. The syntax is easier to write and much more svelte overall. In addition, another Github (I hang out there a lot) user has a wonderful set of [css stylesheets][7] that work flawlessly with Albino and Pygments. Simply include the gem in Nanoc's Rules file, right before the routes, and add the css file (named 'default.css') into the output directory. Easy - code highlighting.
