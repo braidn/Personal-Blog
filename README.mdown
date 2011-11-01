@@ -1,0 +1,5 @@
+Backup for [Cloudbacon.com](http://www.cloudbacon.com)
+
+Thanks for a wonderful service: [Github](http://www.github.com),  
+a wonderful static site engine: [Nanoc](http://nanoc.stoneship.org),  
+and an unbelievably fun/amazing/enthrawling: [programming language](http://www.ruby-lang.org/en/)
