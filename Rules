@@ -18,16 +18,23 @@ compile '/posts/*' do
     rep.layout 'post'
     rep.layout 'default'
 end
+
 route '/posts/*', :rep => :summary do
     nil
 end
+
 compile '/posts/*', :rep => :summary do
     rep.filter :erb
     rep.filter :bluecloth
     rep.layout 'post_summary'
 end
+
 compile '/stylesheet/' do
   # don’t filter or layout
+end
+
+compile '/js/*/' do
+  # not a damn thing
 end
 
 compile '/feed/' do
@@ -35,8 +42,16 @@ compile '/feed/' do
 end
 
 compile '*' do
-  filter :erb
-  layout 'default'
+  ext = item[:extension].nil? ? nil : item[:extension].split('.').last
+  if ext == 'mdown' || 'html'
+    filter :erb
+    filter :bluecloth
+  elsif ext == 'haml'
+    filter :haml
+  else
+    raise "Filter is not configured in Rules"
+  end
+  layout 'default' unless item[:layout] == 'none'
 end
 
 route '/stylesheet/' do
@@ -47,9 +62,12 @@ route '/feed/' do
   '/feed.xml'
 end
 
+route '/js/*/' do
+  item.identifier.chop + '.' + item[:extension]
+end
+
 route '*' do
   item.identifier + 'index.html'
 end
 
-layout '*', :erb
-
+layout '*', :haml, :filter => :html5

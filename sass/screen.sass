@@ -4,6 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 @import compass/reset
+@import compass/typography/links/link-colors
 
 *
   margin: 0
@@ -15,13 +16,8 @@ body
   background: #fff
 
 a
+  +link-colors(#f30, #f90, #f30, #f30, #f90)
   text-decoration: none
-  &:link
-    color: #f30
-  &:visited
-    color: #f30
-  &:hover
-    color: #f90
 strong
   font:
     size: 105%
@@ -49,8 +45,13 @@ strong
     color: #999
     border-left: 2px dashed #999
     padding-left: 1em
+  #post
+    p
+      margin: 20px 0
+      font:
+        size: 15px
+      line-height: 20px
   p
-    margin: 20px 0
     font:
       size: 15px
     line-height: 20px
@@ -58,7 +59,7 @@ strong
     font:
       size: 40px
       weight: normal
-    line-height:normal
+    line-height: normal
     letter-spacing: -1px
   ul
     margin: 20px
