@@ -3,10 +3,10 @@
 # Set this to the root of your project when deployed:
 http_path = "/"
 output_style = :compact
-css_dir = "output"
-sass_dir = "sass"
+css_dir = "output/stylz"
+sass_dir = "content/stylz"
 images_dir = "output/images"
-javascripts_dir = "output/javascripts"
+javascripts_dir = "output/js"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

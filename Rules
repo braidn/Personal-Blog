@@ -19,18 +19,23 @@ compile '/posts/*' do
     rep.layout 'default'
 end
 
-route '/posts/*', :rep => :summary do
-    nil
-end
-
 compile '/posts/*', :rep => :summary do
     rep.filter :erb
     rep.filter :bluecloth
     rep.layout 'post_summary'
 end
 
-compile '/stylesheet/' do
-  # don’t filter or layout
+route '/posts/*', :rep => :summary do
+    nil
+end
+
+compile '/stylz/*/' do
+  case item[:extension]
+  when 'sass'
+    filter :sass, Compass.sass_engine_options
+  when 'css'
+    # for pigments(albino) css sheets. No point in turning into sass/scss
+  end
 end
 
 compile '/js/*/' do
@@ -42,20 +47,18 @@ compile '/feed/' do
 end
 
 compile '*' do
-  ext = item[:extension].nil? ? nil : item[:extension].split('.').last
-  if ext == 'mdown' || 'html'
+  case item[:extension]
+  when 'mdown' || 'html'
     filter :erb
     filter :bluecloth
-  elsif ext == 'haml'
+  when 'haml'
     filter :haml
-  else
-    raise "Filter is not configured in Rules"
   end
   layout 'default' unless item[:layout] == 'none'
 end
 
-route '/stylesheet/' do
-  '/style.css'
+route '/stylz/*/' do
+  item.identifier.chop + "." + "css"
 end
 
 route '/feed/' do
