@@ -45,6 +45,7 @@ strong
     color: #999
     border-left: 2px dashed #999
     padding-left: 1em
+
   #post
     p
       margin: 20px 0
@@ -70,6 +71,15 @@ strong
     line-height: 20px
     .postDate
       float: right
+
+  blockquote[cite]:after
+    content: "Quote borrowed with love from: " attr(cite)
+    margin-top: 5px
+    display: block
+    font-size: 0.8em
+    color: #F02475
+    text-align: right
+
   ol
     li
       list-style-type: decimal-leading-zero
