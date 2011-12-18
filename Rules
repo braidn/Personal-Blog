@@ -39,7 +39,7 @@ compile '/stylz/*/' do
 end
 
 compile '/js/*/' do
-  # not a damn thing
+  # not a damn thing/mainly because my JS is choppy
 end
 
 compile '/feed/' do
