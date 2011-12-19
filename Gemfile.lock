@@ -30,3 +30,4 @@ DEPENDENCIES
   haml
   nanoc
   rake
+  sass
