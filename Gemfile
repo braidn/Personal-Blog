@@ -1,6 +1,7 @@
 source :rubygems
 
 gem 'builder'
+gem 'mime-types'
 gem 'rack'
 gem 'adsf'
 gem 'albino'
