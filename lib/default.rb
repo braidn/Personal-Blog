@@ -1,6 +1,5 @@
 # All files in the 'lib' directory will be loaded
 # before nanoc starts compiling.
-# lib/default.rb
 
 include Nanoc3::Helpers::Blogging
 include Nanoc3::Helpers::Breadcrumbs
@@ -13,8 +12,6 @@ include Nanoc3::Helpers::Tagging
 include Nanoc3::Helpers::Text
 include Nanoc3::Helpers::XMLSitemap
 
-# This is just some syntactical sugar that we use later
-# Don't worry about it for now.
 class Nanoc3::Item
   def content(opts = {})
     opts[:rep] ||= :default
