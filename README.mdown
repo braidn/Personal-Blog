@@ -3,3 +3,13 @@ Backup for [Cloudbacon.com](http://www.cloudbacon.com)
 Thanks for a wonderful service: [Github](http://www.github.com),  
 a wonderful static site engine: [Nanoc](http://nanoc.stoneship.org),  
 and an unbelievably fun/amazing/enthrawling: [programming language](http://www.ruby-lang.org/en/)
+
+###Hungry Academy Part 2
+
+This is my personal blog powered by Nanoc, which is a "hip" static site generator. Nanoc was chosen for this task because it had a fairly robust and simple deployment scheme, supported HAML, SASS(more on that in a few) Markdown, and did not require Rack/Thin(_read:_ produces flat files), unlike Toto, Sinatra.
+
+Within the layouts section there are three haml files: default, post, and post summary. Although I enjoy building HTML with [sparkup](https://github.com/rstacruz/sparkup), HAML with its' white space, indented elegance is much easier to wrestle with. In addition, I believe the change from HTML to HAML was on a template engine learning kick(this happens often).
+
+Nanoc uses a Routes file (located at: root) to direct the compilation of the files. There is definitely subtle bits of shiny magic here. I really enjoy the case statement over a bunch of if-else declarations. Moreover, it works magic here where Nanoc is iterating over a load of files with different extensions and marginally quicker at compilation time.
+
+The remainder of the project is either SASS files, of which I know how to write both styles or posts to check off the "blog" requirement. Hope you enjoyed the code-romp.
