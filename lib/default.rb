@@ -22,4 +22,5 @@ class Nanoc3::Item
   def name
     identifier.split("/").last 
   end
+
 end

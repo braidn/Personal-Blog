@@ -12,9 +12,7 @@
     %meta{:name => "description", :content => "A blog that makes a good attempt at structuring the thoughts of Braden Douglass into a digestable web-type form. Expect some posts on programming, living with humanity, and kool-aid links"}
   %body
     #main
-      %iframe{:src => "http://duckduckgo.com/search.html?width=450&site=cloudbacon.com&prefill=Tomahawk Utility Belt",
-        :style => "overflow:hidden;margin:0;padding:0px 0px 10px;width:498px;height:38px;float:left;",
-        :frameborder => "0"}
+      =ddgsearch
       =yield
     #sidebar
       %img{:src=> "http://c522735.r35.cf2.rackcdn.com/cloud4.jpeg", :alt=> "cloud icon"}
