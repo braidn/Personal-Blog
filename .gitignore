@@ -6,6 +6,7 @@ NERD_tree_*
 
 #File
 .bundle/*
+.bin/*
 .sass-cache
 /output/*
 /thoughts/*
