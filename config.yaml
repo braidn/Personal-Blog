@@ -49,4 +49,4 @@ author_uri: http://www.bradendouglass.com
 
 deploy:
     default:
-        dst: 'myuntitledfolder.com@s58585.gridserver.com:/home/58585/users/.home/domains/cloudbacon.com/html'
+        dst: 'bdouglas@cloudbacon.com:/srv/http/cloudbacon.com/public'
