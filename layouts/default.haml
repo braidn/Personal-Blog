@@ -4,8 +4,9 @@
     %meta{:charset => "utf-8"}
     %title
       ="#{@item[:title]}"
-    %link{:rel => "stylesheet", :type => "text/css", :href => "/stylz/screen.css", :media => "screen"}
-    -# %link{:rel => "stylesheet", :type => "text/css", :href =>"/stylz/print.css", :media => "print"}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/stylz/app.css", :media => "screen, projector, print"}
+    /[if IE lt 9]
+      %link{:rel => 'stylesheet', :type => 'text/css', :href => '/stylz/ie.css'}
     / Remaining css used as helpers (pygments)
     %link{:rel =>"stylesheet", :type => "text/css", :href => "/stylz/default.css", :media =>"screen"}
     %meta{:name =>"generator", :content => "nanoc 3.1.6"}
@@ -14,6 +15,12 @@
     #main
       =ddgsearch
       =yield
+
+      %script{:src => '/js/jquery-min.js'}
+      %script{:src => '/js/modernizr-foundation.js'}
+      %script{:src => '/js/jquery-placeholder-min.js'}
+      %script{:src => '/js/jquery-reveal.js'}
+      %script{:src => '/js/app.js'}
     #sidebar
       %img{:src=> "http://c522735.r35.cf2.rackcdn.com/cloud4.jpeg", :alt=> "cloud icon"}
       %br/
