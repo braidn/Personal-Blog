@@ -1,8 +1,13 @@
 #!/usr/bin/env ruby
 
+require 'ZURB-foundation'
 require 'compass'
 require 'albino'
 Compass.add_project_configuration 'config.rb'
+
+preprocess do
+  statics
+end
 
 compile '/posts/*' do
     rep.filter :erb

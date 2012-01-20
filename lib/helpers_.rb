@@ -1,1 +1,2 @@
 include DuckDuckGoSearchHelper
+include StaticOutputCopy
