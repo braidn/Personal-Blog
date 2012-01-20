@@ -41,7 +41,7 @@ data_sources:
     # same as the items root, but applies to layouts rather than items.
     layouts_root: /
 
-search: '<iframe src="http://duckduckgo.com/search.html?width=438&site=cloudbacon.com&prefill=Tomahawk Utility Belt", style="overflow:hidden;margin:0;padding:0px 0px 10px;width:498px;height:38px;float:left;", frameborder="0"></iframe>'
+search: '<iframe src="http://duckduckgo.com/search.html?width=438&site=cloudbacon.com&prefill=Do Something To Block SOPA Today", style="overflow:hidden;margin:0;padding:0px 0px 10px;width:498px;height:38px;float:left;", frameborder="0"></iframe>'
 
 title: Cloudbacon
 author_name: Braden Douglass
