@@ -14,23 +14,21 @@
   %body
     .container
       .row
-        .two.columns
-          #sidebar
-            %img{:src=> "http://c522735.r35.cf2.rackcdn.com/cloud4.jpeg", :alt=> "cloud icon"}
-            %br/
-            %img{:src=> "http://c522735.r35.cf2.rackcdn.com/Bacon.png", :style=> "padding-right: 12px", :alt=> "bacon icon"}
-            %br/
-            %a{:href => "http://cloudbacon.com/feed.xml", :name => "rss"}
+        %div{:class => 'two.columns', :id => 'sidebar'}
+          %img{:src=> "http://c522735.r35.cf2.rackcdn.com/cloud4.jpeg", :alt=> "cloud icon"}
+          %br/
+          %img{:src=> "http://c522735.r35.cf2.rackcdn.com/Bacon.png", :style=> "padding-right: 12px", :alt=> "bacon icon"}
+          %br/
+          %a{:href => "http://cloudbacon.com/feed.xml", :name => "rss"}
               %img{:src => "http://c522735.r35.cf2.rackcdn.com/RSSicon.png", :alt => "rss icon"}
-        .ten.columns
-          #main
-            .row
-              .twelve.columns
-                .show-on-desktops
-                  =ddgsearch
-            .row
-              .twelve.columns
-                =yield
+        %div{:class => 'ten.columns', :id => 'main'}
+          .row
+            .twelve.columns
+              .show-on-desktops
+                =ddgsearch
+          .row
+            .twelve.columns
+              =yield
 
     %script{:src => '/js/jquery-min.js'}
     %script{:src => '/js/modernizr-foundation.js'}
