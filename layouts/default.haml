@@ -14,16 +14,17 @@
   %body
     .container
       .row
-        %div{:class => 'two columns', :id => 'sidebar'}
-          %img{:src=> "http://c522735.r35.cf2.rackcdn.com/cloud4.jpeg", :alt=> "cloud icon"}
-          %br/
-          %img{:src=> "http://c522735.r35.cf2.rackcdn.com/Bacon.png", :style=> "padding-right: 12px", :alt=> "bacon icon"}
-          %br/
-          %a{:href => "http://cloudbacon.com/feed.xml", :name => "rss"}
-            %img{:src => "http://c522735.r35.cf2.rackcdn.com/RSSicon.png", :alt => "rss icon"}
+        .show-on-desktops
+          %div{:class => 'two columns', :id => 'sidebar'}
+            %img{:src=> "http://c522735.r35.cf2.rackcdn.com/cloud4.jpeg", :alt=> "cloud icon"}
+            %br/
+            %img{:src=> "http://c522735.r35.cf2.rackcdn.com/Bacon.png", :style=> "padding-right: 12px", :alt=> "bacon icon"}
+            %br/
+            %a{:href => "http://cloudbacon.com/feed.xml", :name => "rss"}
+              %img{:src => "http://c522735.r35.cf2.rackcdn.com/RSSicon.png", :alt => "rss icon"}
         %div{:class => 'ten columns', :id => 'main'}
           .row
-            .twelve.columns
+            .eight.columns.centered
               .show-on-desktops
                 =ddgsearch
           .row
