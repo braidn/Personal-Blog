@@ -24,11 +24,11 @@
               %img{:src => "http://c522735.r35.cf2.rackcdn.com/RSSicon.png", :alt => "rss icon"}
         %div{:class => 'ten columns', :id => 'main'}
           .row
-            .eight.columns.centered
+            .eight.columns
               .show-on-desktops
                 =ddgsearch
           .row
-            .twelve.columns
+            .eight.columns
               =yield
 
     %script{:src => '/js/jquery-min.js'}
