@@ -1,11 +1,21 @@
-%h1="#{@item[:title]}"
-%h2="Written for: #{@item[:created_at]}"
-#post
-  =yield
-%br/
-%p.homeButton="filed under: #{tags_for(@item, :base_url => 'http://duckduckgo.com/?q=' + '%23')}"
-- "#{home = @items.find {|i| i.identifier == '/'}}"
-%p.homeButton= "#{link_to('Back To List of Posts', home)}"
-#disqus_thread
-  %script{:src => "/js/disqus.js", :type => "text/javascript", :charset => "utf-8"}
-
+.row
+  .twelve.columns
+    %h1="#{@item[:title]}"
+.row
+  .twelve.columns
+    %h2="Written for: #{@item[:created_at]}"
+.row
+  %div{:class => 'twelve columns', :id => 'post'}
+    =yield
+.row
+  .twelve.columns
+    %hr/
+.row
+  .twelve.columns
+    %p.homeButton="filed under: #{tags_for(@item, :base_url => 'http://duckduckgo.com/?q=' + '%23')}"
+    - "#{home = @items.find {|i| i.identifier == '/'}}"
+    %p.homeButton= "#{link_to('Back To List of Posts', home)}"
+.row
+  .twelve.columns
+    %div{:id => 'disqus_thread', :class => 'twelve columns'}
+      %script{:src => "/js/disqus.js", :type => "text/javascript", :charset => "utf-8"}

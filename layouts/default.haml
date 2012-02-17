@@ -4,20 +4,35 @@
     %meta{:charset => "utf-8"}
     %title
       ="#{@item[:title]}"
-    %link{:rel => "stylesheet", :type => "text/css", :href => "/stylz/screen.css", :media => "screen"}
-    -# %link{:rel => "stylesheet", :type => "text/css", :href =>"/stylz/print.css", :media => "print"}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/stylz/app.css", :media => "screen, projector, print"}
+    /[if IE lt 9]
+      %link{:rel => 'stylesheet', :type => 'text/css', :href => '/stylz/ie.css'}
     / Remaining css used as helpers (pygments)
     %link{:rel =>"stylesheet", :type => "text/css", :href => "/stylz/default.css", :media =>"screen"}
     %meta{:name =>"generator", :content => "nanoc 3.1.6"}
     %meta{:name => "description", :content => "A blog that makes a good attempt at structuring the thoughts of Braden Douglass into a digestable web-type form. Expect some posts on programming, living with humanity, and kool-aid links"}
   %body
-    #main
-      =ddgsearch
-      =yield
-    #sidebar
-      %img{:src=> "http://c522735.r35.cf2.rackcdn.com/cloud4.jpeg", :alt=> "cloud icon"}
-      %br/
-      %img{:src=> "http://c522735.r35.cf2.rackcdn.com/Bacon.png", :style=> "padding-right: 12px", :alt=> "bacon icon"}
-      %br/
-      %a{:href => "http://cloudbacon.com/feed.xml", :name => "rss"}
-        %img{:src => "http://c522735.r35.cf2.rackcdn.com/RSSicon.png", :alt => "rss icon"}
+    .container
+      .row
+        .show-on-desktops
+          %div{:class => 'two columns', :id => 'sidebar'}
+            %img{:src=> "http://c522735.r35.cf2.rackcdn.com/cloud4.jpeg", :alt=> "cloud icon"}
+            %br/
+            %img{:src=> "http://c522735.r35.cf2.rackcdn.com/Bacon.png", :style=> "padding-right: 12px", :alt=> "bacon icon"}
+            %br/
+            %a{:href => "http://cloudbacon.com/feed.xml", :name => "rss"}
+              %img{:src => "http://c522735.r35.cf2.rackcdn.com/RSSicon.png", :alt => "rss icon"}
+        %div{:class => 'ten columns', :id => 'main'}
+          .row
+            .eight.columns
+              .show-on-desktops
+                =ddgsearch
+          .row
+            .eight.columns
+              =yield
+
+    %script{:src => '/js/jquery-min.js'}
+    %script{:src => '/js/modernizr-foundation.js'}
+    %script{:src => '/js/jquery-placeholder-min.js'}
+    %script{:src => '/js/jquery-reveal.js'}
+    %script{:src => '/js/app.js'}

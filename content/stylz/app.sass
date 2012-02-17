@@ -1,7 +1,17 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+// ZURB Foundation
+//-----------------------------------------
+
+// ZURB Foundation settings
+
+// $grid-max-width: 980px
+// $grid-min-width: 800px
+
+// ZURB Foundation settings
+
+@import ZURB-foundation
+// Project Styles
+//-----------------------------------------
+
 
 @import compass/reset
 @import compass/typography/links/link-colors
@@ -25,10 +35,10 @@ strong
   font-weight: bold
 
 #main
-  :position absolute
-  :top 40px
-  :left 280px
-  :width 500px
+  //:position absolute
+  //:top 40px
+  //:left 280px
+  //:width 500px
   ::selection
     color: #3B2D38
     background:
@@ -89,10 +99,10 @@ strong
         top: 10px
 
 #sidebar
-  position: absolute
-  top: 40px
-  left: 20px
-  width: 200px
+  //position: absolute
+  //top: 40px
+  //left: 20px
+  //width: 200px
   padding: 20px 0 0 0
   border-right: 1px solid #ccc
   text-align: right
@@ -122,3 +132,8 @@ img
 
 .homeButton
   text-align: center
+
+.row
+  .centered
+    float: none
+    margin: 0 auto
